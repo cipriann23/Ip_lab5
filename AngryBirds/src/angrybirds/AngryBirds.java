@@ -20,7 +20,7 @@ public class AngryBirds {
         GameState myState2 = GameState.getInstance();
         
         
-        Pig john = new Pig(10);
+        Pig john = new Pig(10, 1, 1);
         john.die();
     }
     

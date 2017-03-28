@@ -4,10 +4,11 @@ import java.util.Vector;
 
 public class Bird extends PhysicsObject {
 
-  public String color;
-
-  public String power;
-
-  int dmg;
+    public Bird(int xPos, int yPos) {
+        super(xPos, yPos);
+    }
+    public String color;
+    public String power;
+    public int damage;
 
 }

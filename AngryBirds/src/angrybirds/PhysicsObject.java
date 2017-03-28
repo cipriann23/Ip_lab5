@@ -4,6 +4,11 @@ public class PhysicsObject {
 
   public float posX;
 
+    public PhysicsObject(float posX, float posY) {
+        this.posX = posX;
+        this.posY = posY;
+    }
+
   public float posY;
 
   public int weight;
@@ -16,9 +21,26 @@ public class PhysicsObject {
 
   public float vY;
 
-  public float angle;
+  private float angle;
 
   public void computeNextState() {
+      this.posX += this.vX;
+      this.posY += this.vY;
+      
   }
+
+    /**
+     * @return the angle
+     */
+    public float getAngle() {
+        return angle;
+    }
+
+    /**
+     * @param angle the angle to set
+     */
+    public void setAngle(float angle) {
+        this.angle = angle;
+    }
 
 }

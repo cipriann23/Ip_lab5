@@ -20,19 +20,15 @@ public class GameState {
         return instance;
     }
     public int score;
-
     public ArrayList<Pig> pigs;
-
     public ArrayList<Bird> birds;
-
     public int level;
-
     public Slingshot slingshot;
-
     public ArrayList<Block> blocks;
-
     public int frameCtr;
 
+    public int maxFrameHeight;
+    public int maxFrameWidth;
 
     public Vector myPig;
     public Vector myBird;
@@ -40,7 +36,17 @@ public class GameState {
     public Vector mySlingshot;
 
     public void nextFrame() {
+        for (Bird b : birds) {
+            for (Pig p : pigs) {
+                if (b.posX == p.posX && b.posY == p.posY) {
+                    p.health -= b.damage;
+                    if (p.health == 0) {
+                        p.die();
+                        pigs.remove(p);
+                    }
+                }
+            }
+        }
+
     }
-
-
 }
