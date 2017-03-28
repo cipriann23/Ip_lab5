@@ -9,7 +9,15 @@ public class Pig extends PhysicsObject {
     }
 
     public void die() {
+        if(this.health<=0){
         System.out.println("Pig of health " + health + " died.");
+        }
     }
-
+    
+    public void damage(Bird b){
+        if(this.health>0){
+            this.health=this.health-b.dmg;
+        }
+        
+    }
 }

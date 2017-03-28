@@ -8,6 +8,6 @@ public class Bird extends PhysicsObject {
 
   public String power;
 
-   
+  int dmg;
 
 }
