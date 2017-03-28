@@ -4,13 +4,14 @@ public class Pig extends PhysicsObject {
 
     public int health;
     
-    public Pig(int h, int xPos, int yPos) {
+    public Pig( int xPos, int yPos,int h) {
         super(xPos, yPos);
         health = h;
     }
 
-    public void die() {
-        System.out.println("Pig of health " + health + " died.");
+    public String die() {
+        
+        return ("Pig of health " + health + " died.");
     }
 
 }

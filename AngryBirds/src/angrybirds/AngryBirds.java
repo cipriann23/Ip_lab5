@@ -16,8 +16,8 @@ public class AngryBirds {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        GameState myState = GameState.getInstance();
-        GameState myState2 = GameState.getInstance();
+        GameState myState = GameState.getInstance(100,100);
+        GameState myState2 = GameState.getInstance(100,100);
         
         
         Pig john = new Pig(10, 1, 1);

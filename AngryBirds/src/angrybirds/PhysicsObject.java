@@ -2,32 +2,45 @@ package angrybirds;
 
 public class PhysicsObject {
 
-  public float posX;
+    public float posX;
 
     public PhysicsObject(float posX, float posY) {
         this.posX = posX;
         this.posY = posY;
     }
 
-  public float posY;
+    public PhysicsObject(float posX, float posY, int weight, int width, int height) {
+        this.posX = posX;
+        this.posY = posY;
+        this.weight = weight;
+        this.width = width;
+        this.height = height;
+    }
 
-  public int weight;
+    public PhysicsObject(int weight, int width) {
+        this.weight = weight;
+        this.width = width;
+    }
 
-  public int width;
+    public float posY;
 
-  public int height;
+    public int weight;
 
-  public float vX;
+    public int width;
 
-  public float vY;
+    public int height;
 
-  private float angle;
+    public float vX;
 
-  public void computeNextState() {
-      this.posX += this.vX;
-      this.posY += this.vY;
-      
-  }
+    public float vY;
+
+    private float angle;
+
+    public void computeNextState() {
+        this.posX += this.vX;
+        this.posY += this.vY;
+
+    }
 
     /**
      * @return the angle
@@ -41,6 +54,10 @@ public class PhysicsObject {
      */
     public void setAngle(float angle) {
         this.angle = angle;
+    }
+
+    public int getDensity() {
+        return this.weight / (this.width * this.height);
     }
 
 }
